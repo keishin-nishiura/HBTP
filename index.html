@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<title>Kyoto × Osaka Birthday Trip 2026</title>
+<meta name="description" content="2026.9.5-9.7 京都・大阪 誕生日サプライズ旅行のしおり">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ 星屑パーティクル(背景演出用・JSで生成) ============ -->
+<div class="star-field" id="starField" aria-hidden="true"></div>
+
+<!-- ============ HERO：焦らし → 発表 ============ -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="flash-overlay" id="flashOverlay" aria-hidden="true"></div>
+
+  <div class="hero-stage" id="heroStage">
+    <!-- STEP 1: 焦らしパート -->
+    <div class="tease" id="teasePart">
+      <p class="eyebrow">Private &amp; Confidential Invitation</p>
+      <p class="tease-to" id="teaseTo"><span data-field="personName">○○</span>へ</p>
+      <h1 class="tease-line" id="teaseLine">とある場所へ、<br>2泊3日の旅にご招待します。</h1>
+      <p class="tease-sub">行き先は、まだ内緒。</p>
+
+      <button class="seal-btn" id="openSeal" type="button">
+        <span class="seal-ring">
+          <span class="seal-icon">✦</span>
+        </span>
+        <span class="seal-label">封を開ける</span>
+      </button>
+      <p class="seal-hint">タップして行き先を確認</p>
+    </div>
+
+    <!-- STEP 2: 誕生日おめでとうパート -->
+    <div class="celebrate" id="celebratePart">
+      <p class="eyebrow gold">Happy Birthday</p>
+      <p class="celebrate-name"><span data-field="personName">○○</span>へ</p>
+      <p class="celebrate-cake">🎂</p>
+      <h2 class="celebrate-title">お誕生日<br>おめでとう</h2>
+      <p class="celebrate-sub">今年も、とっておきの1日を。</p>
+      <p class="celebrate-next">そして今回は…</p>
+    </div>
+
+    <!-- STEP 3: 発表パート -->
+    <div class="reveal" id="revealPart">
+      <p class="eyebrow gold">Surprise Destination</p>
+      <p class="reveal-lead">行き先は…</p>
+      <h2 class="reveal-dest">
+        <span class="dest-kyoto" data-stagger>京都</span>
+        <span class="dest-cross">×</span>
+        <span class="dest-osaka" data-stagger>大阪</span>
+      </h2>
+      <p class="reveal-dates" data-field="dateRange">2026.09.05 Sat &nbsp;→&nbsp; 09.07 Mon</p>
+      <p class="reveal-stay" data-field="stayLabel">2泊3日 · Birthday Trip</p>
+
+      <div class="countdown" id="countdown" aria-label="旅行開始までのカウントダウン">
+        <div class="cd-box"><span class="cd-num" id="cdDays">--</span><span class="cd-label">Days</span></div>
+        <div class="cd-box"><span class="cd-num" id="cdHours">--</span><span class="cd-label">Hours</span></div>
+        <div class="cd-box"><span class="cd-num" id="cdMinutes">--</span><span class="cd-label">Min</span></div>
+        <div class="cd-box"><span class="cd-num" id="cdSeconds">--</span><span class="cd-label">Sec</span></div>
+      </div>
+
+      <a href="#overview" class="scroll-cue">
+        <span>しおりを見る</span>
+        <span class="scroll-arrow">↓</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+  <div class="hero-end-marker" id="heroEndMarker" aria-hidden="true"></div>
+</section>
+
+<!-- ============ ナビゲーション ============ -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-scroll">
+    <a href="#overview" class="nav-link" data-nav>Prologue</a>
+    <a href="#itinerary" class="nav-link" data-nav>旅程</a>
+    <a href="#stay" class="nav-link" data-nav>宿泊・移動</a>
+    <a href="#message" class="nav-link" data-nav>Message</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ PROLOGUE / 概要 ============ -->
+  <section class="section prologue" id="overview">
+    <div class="container">
+      <p class="section-eyebrow reveal-up">Prologue</p>
+      <h2 class="section-title reveal-up">旅のはじまりに</h2>
+      <p class="prologue-text reveal-up" data-field="prologueText">
+        誕生日おめでとう。今回は少し贅沢に、京都からスタートして大阪で締めくくる2泊3日の旅を用意しました。
+        美味しいもの、綺麗な景色、写真に残したい瞬間。ゆっくり、たっぷり楽しみましょう。
+      </p>
+
+      <div class="stat-cards">
+        <div class="stat-card reveal-up">
+          <span class="stat-icon">📅</span>
+          <span class="stat-label">DATE</span>
+          <span class="stat-value">2026.09.05 – 09.07</span>
+        </div>
+        <div class="stat-card reveal-up">
+          <span class="stat-icon">📍</span>
+          <span class="stat-label">DESTINATION</span>
+          <span class="stat-value">京都 ・ 大阪</span>
+        </div>
+        <div class="stat-card reveal-up">
+          <span class="stat-icon">🌙</span>
+          <span class="stat-label">STAY</span>
+          <span class="stat-value">2泊3日</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ITINERARY / 旅程タイムライン ============ -->
+  <section class="section itinerary" id="itinerary">
+    <div class="container">
+      <p class="section-eyebrow reveal-up">Itinerary</p>
+      <h2 class="section-title reveal-up">3日間のしおり</h2>
+      <p class="section-desc reveal-up">タブを切り替えて、各日の旅程を確認できます。</p>
+
+      <div class="day-tabs" id="dayTabs" role="tablist"></div>
+      <div class="day-panels" id="dayPanels"></div>
+    </div>
+  </section>
+
+  <!-- ============ STAY & TRANSPORT / ホテル・移動 ============ -->
+  <section class="section stay" id="stay">
+    <div class="container">
+      <p class="section-eyebrow reveal-up">Stay &amp; Access</p>
+      <h2 class="section-title reveal-up">宿泊 &amp; 移動</h2>
+      <p class="section-desc reveal-up">確定情報は決まり次第このカードを更新します。現時点は仮の内容です。</p>
+
+      <h3 class="sub-heading reveal-up">🏨 ホテル</h3>
+      <div class="hotel-cards" id="hotelCards"></div>
+
+      <h3 class="sub-heading reveal-up">🚄 移動手段</h3>
+      <div class="transport-list" id="transportList"></div>
+    </div>
+  </section>
+
+  <!-- ============ BIRTHDAY MESSAGE ============ -->
+  <section class="section message" id="message">
+    <div class="container container-narrow">
+      <p class="section-eyebrow reveal-up">A Letter For You</p>
+      <h2 class="section-title reveal-up">誕生日メッセージ</h2>
+
+      <div class="letter-card reveal-up">
+        <p class="letter-title" data-field="letterTitle">Happy Birthday 🎂</p>
+        <p class="letter-body" data-field="letterBody">
+          いつもありがとう。今年もこの日を一緒にお祝いできて嬉しいです。
+          この旅が、忘れられない誕生日の思い出になりますように。
+          これからも笑顔溢れる一年になりますように。
+        </p>
+        <p class="letter-signature" data-field="letterSignature">— 差出人より</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p data-field="footerText">Osaka × Kyoto Birthday Trip · 2026.09.05–09.07</p>
+  <p class="footer-sub">Made with ❤ for a special birthday</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
