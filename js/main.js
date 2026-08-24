@@ -403,16 +403,12 @@
       wrap.classList.toggle("is-visible", pastHero && !inFooter);
     }
 
-    const TOP_MIN = 18; // vh%: スクロール開始直後の縦位置
-    const TOP_MAX = 74; // vh%: フッター手前での縦位置
-
     function update() {
       const doc = document.documentElement;
       const scrollable = Math.max(doc.scrollHeight - window.innerHeight, 1);
       const progress = Math.min(Math.max(window.scrollY / scrollable, 0), 1);
       const index = Math.min(Math.floor(progress * items.length), items.length - 1);
       applyIndex(index);
-      wrap.style.top = (TOP_MIN + progress * (TOP_MAX - TOP_MIN)).toFixed(2) + "%";
     }
 
     function onScroll() {

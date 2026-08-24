@@ -438,7 +438,7 @@ button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparen
 .reveal-up.is-in-view { opacity: 1; transform: translateY(0); }
 
 /* ---------------- Prologue ---------------- */
-.prologue { background: var(--cream); }
+.prologue { background: rgba(248, 244, 236, 0.55); }
 .prologue-text {
   margin-top: 22px;
   font-size: 0.96rem;
@@ -466,7 +466,7 @@ button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparen
 .stat-value { font-size: 0.82rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
 
 /* ---------------- Itinerary ---------------- */
-.itinerary { background: linear-gradient(180deg, var(--cream), #f2ece0); }
+.itinerary { background: rgba(248, 244, 236, 0.55); }
 .day-tabs {
   margin-top: 30px;
   display: grid;
@@ -598,7 +598,7 @@ button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparen
 .timeline-place:hover { border-color: currentColor; }
 
 /* ---------------- Stay & Transport ---------------- */
-.stay { background: var(--cream); }
+.stay { background: rgba(248, 244, 236, 0.55); }
 .hotel-cards { display: grid; gap: 14px; }
 .hotel-card {
   background: linear-gradient(160deg, #fff, #f7f1e6);
@@ -744,61 +744,43 @@ button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparen
 .photo-time { margin-top: 8px; font-size: 0.78rem; color: var(--gold); font-weight: 700; }
 .photo-tip { margin-top: 8px; font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
 
-/* ---------------- Memories Float (ページ全体のスクロールと一緒に上下へ移動する、はっきり見える同伴ビジュアル) ---------------- */
+/* ---------------- Memories Layer (カードの下・セクション地の上に敷く大きな背景レイヤー) ---------------- */
+/* セクション自体は transparent にして、このレイヤーを直接透かして見せる。カードは不透明のまま文字を保護。 */
 .memory-float {
   position: fixed;
-  top: 20%;
-  right: 4%;
-  width: 62vw;
-  max-width: 300px;
-  z-index: 2;
+  inset: -3%;
+  z-index: 0;
   pointer-events: none;
   opacity: 0;
-  transform: translateY(-50%);
-  transition: opacity 1.1s ease, top 0.2s linear;
-  will-change: top;
+  transition: opacity 1.6s ease;
 }
 .memory-float.is-visible {
-  opacity: 0.96;
-  animation: memory-float-drift 20s ease-in-out infinite;
+  opacity: 0.95;
+  animation: memory-float-drift 30s ease-in-out infinite;
 }
-.memory-float-frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 560 / 358;
-  -webkit-mask-image: radial-gradient(ellipse 76% 76% at 58% 46%, #000 52%, transparent 88%);
-  mask-image: radial-gradient(ellipse 76% 76% at 58% 46%, #000 52%, transparent 88%);
-  filter: drop-shadow(0 20px 34px rgba(124, 90, 40, 0.22));
-}
+.memory-float-frame { position: relative; width: 100%; height: 100%; }
 .memory-float-img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   opacity: 0;
-  transition: opacity 1.3s ease;
+  transition: opacity 1.8s ease;
 }
 .memory-float-img.is-front { opacity: 1; }
 @keyframes memory-float-drift {
-  0%, 100% { transform: translateY(-50%) translate(0, 0) rotate(0deg); }
-  50% { transform: translateY(-50%) translate(-2%, -2.4%) rotate(-1deg); }
-}
-
-@media (min-width: 640px) {
-  .memory-float { width: 38vw; max-width: 340px; right: 5%; }
-}
-@media (min-width: 960px) {
-  .memory-float { width: 26vw; max-width: 400px; }
+  0%, 100% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.04) translate(-1.2%, -1.2%); }
 }
 @media (prefers-reduced-motion: reduce) {
   .memory-float.is-visible { animation: none; }
-  .memory-float { transition: opacity 0.3s ease; }
   .memory-float-img { transition: opacity 0.3s ease; }
 }
 
 /* ---------------- Birthday Message ---------------- */
-.message { background: linear-gradient(180deg, var(--cream), #ece2cd); }
+.message { background: rgba(248, 244, 236, 0.55); }
 .letter-card {
   margin-top: 30px;
   background: #fffefb;

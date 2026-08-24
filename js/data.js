@@ -192,22 +192,22 @@ const TRIP_DATA = {
     },
   ],
 
-  // ---- 思い出ギャラリー（スクロール連動で浮かび上がるビジュアル） ----
+  // ---- 思い出ギャラリー（スクロール連動で浮かび上がるビジュアル。背景レイヤーではタイトル文字入りの原画と本文が重ならないよう、キャプション帯をトリミングした -bg 版を使用） ----
   memories: [
     {
-      image: "assets/images/memories/night-visit.png",
+      image: "assets/images/memories/night-visit-bg.png",
       alt: "石清水八幡宮、夜の参道で提灯を見上げる後ろ姿のイラスト",
     },
     {
-      image: "assets/images/memories/post-memory.png",
+      image: "assets/images/memories/post-memory-bg.png",
       alt: "木漏れ日の下、黄色いポストの前に立つイラスト",
     },
     {
-      image: "assets/images/memories/takeaway-joy.png",
+      image: "assets/images/memories/takeaway-joy-bg.png",
       alt: "バーガーキングの店先でテイクアウトを掲げるイラスト",
     },
     {
-      image: "assets/images/memories/sanctuary-approach.png",
+      image: "assets/images/memories/sanctuary-approach-bg.png",
       alt: "大きな山門を見上げながら参道を歩くイラスト",
     },
   ],
