@@ -191,4 +191,24 @@ const TRIP_DATA = {
       imageAlt: "梅田スカイビルの夜景イメージ",
     },
   ],
+
+  // ---- 思い出ギャラリー（スクロール連動で浮かび上がるビジュアル） ----
+  memories: [
+    {
+      image: "assets/images/memories/night-visit.png",
+      alt: "石清水八幡宮、夜の参道で提灯を見上げる後ろ姿のイラスト",
+    },
+    {
+      image: "assets/images/memories/post-memory.png",
+      alt: "木漏れ日の下、黄色いポストの前に立つイラスト",
+    },
+    {
+      image: "assets/images/memories/takeaway-joy.png",
+      alt: "バーガーキングの店先でテイクアウトを掲げるイラスト",
+    },
+    {
+      image: "assets/images/memories/sanctuary-approach.png",
+      alt: "大きな山門を見上げながら参道を歩くイラスト",
+    },
+  ],
 };

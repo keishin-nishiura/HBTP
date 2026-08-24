@@ -20,6 +20,7 @@
     buildPacking();
     buildPhotoSpots();
     setupNav();
+    setupMemoryFloat();
     setupScrollReveal();
   });
 
@@ -364,6 +365,86 @@
       `;
       grid.appendChild(card);
     });
+  }
+
+  // ---- 思い出フローティング：ページ全体のスクロール量に応じて画像をクロスフェード ----
+  function setupMemoryFloat() {
+    const wrap = document.getElementById("memoryFloat");
+    const imgA = document.getElementById("memoryFloatImgA");
+    const imgB = document.getElementById("memoryFloatImgB");
+    const heroEndMarker = document.getElementById("heroEndMarker");
+    const footer = document.querySelector(".site-footer");
+    if (!wrap || !imgA || !imgB) return;
+
+    const items = TRIP_DATA.memories || [];
+    if (!items.length) return;
+
+    let front = imgA;
+    let back = imgB;
+    let activeIndex = -1;
+    let pastHero = false;
+    let inFooter = false;
+    let ticking = false;
+
+    function applyIndex(index) {
+      if (index === activeIndex) return;
+      activeIndex = index;
+      const memory = items[index];
+      back.src = memory.image;
+      back.alt = memory.alt || "";
+      back.classList.add("is-front");
+      front.classList.remove("is-front");
+      const temp = front;
+      front = back;
+      back = temp;
+    }
+
+    function updateVisibility() {
+      wrap.classList.toggle("is-visible", pastHero && !inFooter);
+    }
+
+    const TOP_MIN = 18; // vh%: スクロール開始直後の縦位置
+    const TOP_MAX = 74; // vh%: フッター手前での縦位置
+
+    function update() {
+      const doc = document.documentElement;
+      const scrollable = Math.max(doc.scrollHeight - window.innerHeight, 1);
+      const progress = Math.min(Math.max(window.scrollY / scrollable, 0), 1);
+      const index = Math.min(Math.floor(progress * items.length), items.length - 1);
+      applyIndex(index);
+      wrap.style.top = (TOP_MIN + progress * (TOP_MAX - TOP_MIN)).toFixed(2) + "%";
+    }
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        update();
+        ticking = false;
+      });
+    }
+
+    if (heroEndMarker) {
+      new IntersectionObserver(
+        ([entry]) => {
+          pastHero = !entry.isIntersecting;
+          updateVisibility();
+        },
+        { threshold: 0 }
+      ).observe(heroEndMarker);
+    }
+    if (footer) {
+      new IntersectionObserver(
+        ([entry]) => {
+          inFooter = entry.isIntersecting;
+          updateVisibility();
+        },
+        { threshold: 0.3 }
+      ).observe(footer);
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    update();
   }
 
   // ---- ナビゲーション：表示切替 & アクティブリンク & スムーススクロール ----
