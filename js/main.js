@@ -219,7 +219,6 @@
           <div class="timeline-card">
             <span class="timeline-time-badge">${item.time}</span>
             <p class="timeline-title">${item.title}</p>
-            <p class="timeline-desc">${item.desc}</p>
             <a class="timeline-place" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.mapQuery || item.place)}" target="_blank" rel="noopener">
               📍 ${item.place}
             </a>
@@ -260,8 +259,6 @@
         <div class="decision-body">
           <span class="decision-label">${decision.label}</span>
           <h3>${decision.title}</h3>
-          <p class="decision-when">${decision.when}</p>
-          <p class="decision-detail">${decision.detail}</p>
           <div class="decision-choices">${choices}</div>
           <a class="decision-map-link" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(decision.mapQuery || decision.title)}" target="_blank" rel="noopener">候補を地図で見る ›</a>
         </div>

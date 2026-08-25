@@ -60,7 +60,7 @@ const TRIP_DATA = {
         { time: "08:30", title: "朝の京都を軽めに散策", desc: "清水寺・産寧坂・二寧坂方面など。USJに備えて、午前は無理なく短めにする。", place: "清水寺周辺", mapQuery: "清水寺 産寧坂 二寧坂", half: "am" },
         { time: "10:45", title: "ホテルに戻ってチェックアウト", desc: "sequence KYOTO GOJOで荷物を回収。チェックアウト時刻に余裕を持って動く。", place: "sequence KYOTO GOJO", mapQuery: "sequence KYOTO GOJO", half: "am" },
         { time: "11:30", title: "京都で早めランチ", desc: "京都駅周辺かホテル近くで軽めに。大阪への移動時間を優先する。", place: "京都市内", mapQuery: "京都駅 ランチ", half: "am" },
-        { time: "12:30", title: "京都からユニバーサルシティへ移動", desc: "JR京都駅から大阪・西九条方面を経由してユニバーサルシティへ。【具体ルート・所要時間は要確認】", place: "京都駅 → ユニバーサルシティ駅", mapQuery: "京都駅 ユニバーサルシティ駅", half: "pm" },
+        { time: "12:30", title: "京都からユニバーサルシティへ移動", desc: "JR京都駅から大阪・西九条方面を経由してユニバーサルシティへ。", place: "京都駅 → ユニバーサルシティ駅", mapQuery: "京都駅 ユニバーサルシティ駅", half: "pm" },
         { time: "14:00", title: "大阪のホテルに荷物預け", desc: "ホテル近鉄ユニバーサル・シティ。荷物を預けて、USJ入場の準備をする。", place: "ホテル近鉄ユニバーサル・シティ", mapQuery: "ホテル近鉄ユニバーサル・シティ", half: "pm" },
         { time: "15:00", title: "USJへ入場（1.5デイ 1日目）", desc: "1.5デイ・スタジオ・パス想定。1日目は15:00から入場して、夕方から夜のパークを楽しむ。", place: "ユニバーサル・スタジオ・ジャパン", mapQuery: "ユニバーサル・スタジオ・ジャパン", half: "pm" },
         { time: "夜", title: "USJまたはシティウォークで夕食", desc: "パーク内かユニバーサル・シティウォーク大阪で、その日の混み具合に合わせて決める。", place: "USJ / ユニバーサル・シティウォーク大阪", mapQuery: "ユニバーサル シティウォーク 大阪 レストラン", half: "pm" },
@@ -125,7 +125,7 @@ const TRIP_DATA = {
   transportation: [
     { label: "往路", type: "Peach MM152 (A320)", detail: "福岡空港 国内線ターミナル 07:25 → 関西空港 第2ターミナル 08:40", time: "9/5 (Sat)" },
     { label: "関空 → 京都", type: "JR 特急はるか12号", detail: "関西空港駅 09:41 → 京都駅 11:04", time: "9/5 (Sat)" },
-    { label: "京都 → USJ", type: "JR 在来線", detail: "京都駅から大阪・西九条方面を経由してユニバーサルシティへ【具体ルート要確認】", time: "9/6 (Sun) 12:30 頃" },
+    { label: "京都 → USJ", type: "JR 在来線", detail: "京都駅から大阪・西九条方面を経由してユニバーサルシティへ", time: "9/6 (Sun) 12:30 頃" },
     { label: "USJ → 関空", type: "関空リムジンバス直行", detail: "USJ 15:40 → 関西空港 第2ターミナル 17:01", time: "9/7 (Mon)" },
     { label: "復路", type: "Peach MM157 (A320)", detail: "関西空港 第2ターミナル 18:50 → 福岡空港 国内線ターミナル 20:10", time: "9/7 (Mon)" },
   ],
