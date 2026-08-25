@@ -16,6 +16,7 @@
     setupHeroReveal();
     startCountdown();
     buildItinerary();
+    buildDecisions();
     buildStay();
     buildPacking();
     buildPhotoSpots();
@@ -202,7 +203,7 @@
       const timeline = document.createElement("ol");
       timeline.className = "timeline";
       let currentHalf = null;
-      const halfLabel = { am: "AM ・ 京都", pm: "PM ・ 大阪" };
+      const halfLabel = { am: "AM ・ 京都", pm: "PM ・ USJ" };
       day.items.forEach((item) => {
         if (item.half && item.half !== currentHalf) {
           currentHalf = item.half;
@@ -234,6 +235,39 @@
       tabsEl.querySelectorAll(".day-tab").forEach((t) => t.classList.toggle("active", Number(t.dataset.dayIndex) === index));
       panelsEl.querySelectorAll(".day-panel").forEach((p) => p.classList.toggle("active", Number(p.dataset.dayIndex) === index));
     }
+  }
+
+  // ---- 当日までに二人で決めること 描画 ----
+  function buildDecisions() {
+    const listEl = document.getElementById("decisionList");
+    if (!listEl) return;
+
+    (TRIP_DATA.decisions || []).forEach((decision, index) => {
+      const card = document.createElement("article");
+      card.className = "decision-card reveal-up";
+      const choices = (decision.choices || [])
+        .map((choice) => {
+          const label = typeof choice === "string" ? choice : choice.label;
+          const url = typeof choice === "string" ? "" : choice.url;
+          if (url) {
+            return `<a class="decision-choice decision-choice-link" href="${url}" target="_blank" rel="noopener">${label}</a>`;
+          }
+          return `<span class="decision-choice">${label}</span>`;
+        })
+        .join("");
+      card.innerHTML = `
+        <div class="decision-index">${String(index + 1).padStart(2, "0")}</div>
+        <div class="decision-body">
+          <span class="decision-label">${decision.label}</span>
+          <h3>${decision.title}</h3>
+          <p class="decision-when">${decision.when}</p>
+          <p class="decision-detail">${decision.detail}</p>
+          <div class="decision-choices">${choices}</div>
+          <a class="decision-map-link" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(decision.mapQuery || decision.title)}" target="_blank" rel="noopener">候補を地図で見る ›</a>
+        </div>
+      `;
+      listEl.appendChild(card);
+    });
   }
 
   // ---- ホテル & 移動手段 描画 ----
