@@ -892,6 +892,13 @@ button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparen
   font-size: 0.78rem;
   line-height: 1.9;
 }
+.footer-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--gold-light);
+  font-weight: 700;
+  border-bottom: 1px solid rgba(232, 200, 147, 0.45);
+}
 .footer-sub { color: rgba(248, 244, 236, 0.4); font-size: 0.7rem; }
 
 /* ================= Responsive (Tablet / Desktop) ================= */
