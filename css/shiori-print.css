@@ -2207,6 +2207,274 @@ body {
   border-top-color: rgba(201, 155, 80, 0.42);
 }
 
+.cover-sheet {
+  padding: 14mm 14mm 20mm;
+  background:
+    radial-gradient(circle at 74% 34%, rgba(119, 157, 190, 0.3), transparent 32%),
+    radial-gradient(circle at 26% 72%, rgba(237, 187, 96, 0.25), transparent 27%),
+    radial-gradient(circle at 88% 80%, rgba(205, 130, 124, 0.18), transparent 24%),
+    linear-gradient(145deg, #fff8ea 0%, #fffefd 43%, #eaf4f8 100%);
+}
+
+.cover-sheet::before {
+  top: 13mm;
+  right: 8mm;
+  width: 76mm;
+  height: 72mm;
+  background:
+    radial-gradient(circle at 17% 17%, rgba(201, 155, 80, 0.52) 0 1.2mm, transparent 1.35mm),
+    radial-gradient(circle at 82% 24%, rgba(75, 99, 128, 0.35) 0 1.35mm, transparent 1.5mm),
+    radial-gradient(circle at 64% 72%, rgba(201, 155, 80, 0.42) 0 0.95mm, transparent 1.1mm),
+    linear-gradient(42deg, transparent 43%, rgba(201, 155, 80, 0.3) 44% 47%, transparent 48%),
+    linear-gradient(-28deg, transparent 48%, rgba(95, 145, 166, 0.24) 49% 52%, transparent 53%);
+  opacity: 1;
+}
+
+.cover-sheet::after {
+  left: 10mm;
+  bottom: 22mm;
+  width: 78mm;
+  height: 54mm;
+  background:
+    radial-gradient(circle at 15% 70%, rgba(95, 145, 166, 0.32) 0 1.3mm, transparent 1.45mm),
+    radial-gradient(circle at 83% 28%, rgba(201, 155, 80, 0.42) 0 1.1mm, transparent 1.25mm),
+    linear-gradient(-34deg, transparent 39%, rgba(201, 155, 80, 0.23) 40% 44%, transparent 45%),
+    linear-gradient(26deg, transparent 55%, rgba(205, 130, 124, 0.18) 56% 59%, transparent 60%);
+}
+
+.cover-sheet .paper-frame {
+  inset: 6.5mm;
+  border-color: rgba(201, 155, 80, 0.42);
+}
+
+.cover-label {
+  right: 13mm;
+  padding: 2.1mm 4.6mm;
+  border-color: rgba(201, 155, 80, 0.25);
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--rose);
+}
+
+.cover-layout {
+  grid-template-columns: minmax(0, 1fr) 68mm;
+  gap: 6mm;
+  min-height: 150mm;
+  align-items: start;
+}
+
+.cover-copy {
+  position: relative;
+  padding-top: 25mm;
+}
+
+.cover-copy::before {
+  content: "HAPPY BIRTHDAY";
+  position: absolute;
+  top: 17mm;
+  left: -1mm;
+  z-index: -1;
+  color: rgba(201, 155, 80, 0.12);
+  font-family: var(--font-display);
+  font-size: 22pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.cover-copy .eyebrow {
+  color: var(--rose);
+  font-size: 8.6pt;
+}
+
+.cover-copy h1 {
+  margin-top: 5mm;
+  color: var(--plum);
+  font-size: 42pt;
+  line-height: 0.98;
+  white-space: nowrap;
+}
+
+.cover-copy h1 span {
+  display: block;
+  margin-bottom: 3.4mm;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 20pt;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.cover-route-label {
+  margin-top: 6mm;
+  padding: 0;
+  border: 0;
+  color: var(--teal);
+  font-size: 12.6pt;
+}
+
+.cover-meta {
+  gap: 2.5mm;
+  margin-top: 8mm;
+}
+
+.cover-meta span {
+  border-color: rgba(201, 155, 80, 0.22);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--navy);
+}
+
+.cover-route-mini {
+  display: flex;
+  align-items: center;
+  gap: 2.3mm;
+  margin-top: 9mm;
+  color: var(--plum);
+  font-size: 8.4pt;
+  font-weight: 900;
+}
+
+.cover-route-mini span {
+  display: grid;
+  place-items: center;
+  min-width: 14mm;
+  height: 8mm;
+  padding: 0 2.5mm;
+  border: 1px solid rgba(95, 145, 166, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.cover-route-mini i {
+  width: 8mm;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201, 155, 80, 0.2), rgba(201, 155, 80, 0.72));
+}
+
+.cover-illustration {
+  position: relative;
+  z-index: 1;
+  width: 68mm;
+  height: 121mm;
+  margin-top: 20mm;
+  overflow: hidden;
+  border: 2mm solid rgba(255, 255, 255, 0.96);
+  border-radius: 3mm;
+  background: #fffefa;
+  box-shadow:
+    2.8mm 3.2mm 0 rgba(95, 145, 166, 0.13),
+    0 8px 18px rgba(65, 55, 42, 0.1);
+  transform: rotate(2deg);
+}
+
+.cover-illustration::before {
+  content: "";
+  position: absolute;
+  inset: 2.5mm;
+  z-index: 2;
+  border: 1px solid rgba(201, 155, 80, 0.2);
+  pointer-events: none;
+}
+
+.cover-illustration::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -3.5mm;
+  z-index: 3;
+  width: 28mm;
+  height: 7mm;
+  background: linear-gradient(90deg, rgba(255, 240, 206, 0.78), rgba(227, 187, 120, 0.48));
+  box-shadow: 0 1mm 3mm rgba(83, 61, 35, 0.1);
+  transform: translateX(-50%) rotate(-4deg);
+}
+
+.cover-illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cover-sheet .photo-collage {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr 0.94fr;
+  gap: 4mm;
+  height: auto;
+  margin-top: 5mm;
+  padding: 0 2mm;
+}
+
+.cover-sheet .photo-card {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: auto;
+  height: 42mm;
+  min-height: 0;
+  border-width: 1.7mm;
+  border-radius: 2mm;
+}
+
+.cover-sheet .main-photo {
+  transform: rotate(-1.4deg);
+}
+
+.cover-sheet .sub-photo-1 {
+  transform: rotate(1.6deg);
+}
+
+.cover-sheet .sub-photo-2 {
+  transform: rotate(-0.8deg);
+}
+
+.cover-sheet .photo-card img {
+  filter: saturate(0.82) sepia(0.08) contrast(0.94) brightness(1.04);
+}
+
+.cover-birthday {
+  display: grid;
+  justify-items: center;
+  gap: 2mm;
+  margin-top: 7mm;
+  padding: 5.5mm 7mm;
+  border: 1px solid rgba(201, 155, 80, 0.26);
+  border-radius: 3mm;
+  background:
+    radial-gradient(circle at 9% 50%, rgba(201, 155, 80, 0.16), transparent 25%),
+    radial-gradient(circle at 91% 45%, rgba(95, 145, 166, 0.13), transparent 27%),
+    rgba(255, 255, 255, 0.66);
+  box-shadow: 0 7px 18px rgba(65, 55, 42, 0.07);
+}
+
+.cover-birthday-label {
+  color: var(--rose);
+  font-size: 10.4pt;
+}
+
+.cover-birthday-text {
+  color: var(--plum);
+  font-size: 12.8pt;
+  line-height: 1.55;
+}
+
+.cover-confetti span:nth-child(1) { top: 21mm; left: 18mm; }
+.cover-confetti span:nth-child(2) { top: 37mm; left: 76mm; }
+.cover-confetti span:nth-child(3) { top: 21mm; right: 59mm; }
+.cover-confetti span:nth-child(4) { top: 62mm; right: 15mm; }
+.cover-confetti span:nth-child(5) { top: 94mm; left: 25mm; }
+.cover-confetti span:nth-child(6) { top: 132mm; right: 83mm; }
+.cover-confetti span:nth-child(7) { top: 165mm; left: 62mm; width: 2.3mm; height: 2.3mm; }
+.cover-confetti span:nth-child(8) { top: 181mm; right: 23mm; width: 2.6mm; height: 2.6mm; }
+.cover-confetti span:nth-child(9) { bottom: 60mm; left: 20mm; width: 2.4mm; height: 2.4mm; }
+.cover-confetti span:nth-child(10) { bottom: 48mm; right: 54mm; width: 2.1mm; height: 2.1mm; }
+.cover-confetti span:nth-child(11) { bottom: 30mm; left: 99mm; width: 2.5mm; height: 2.5mm; }
+.cover-confetti span:nth-child(12) { bottom: 25mm; right: 18mm; width: 2.2mm; height: 2.2mm; }
+
 @page {
   size: A4;
   margin: 0;
