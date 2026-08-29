@@ -16,12 +16,15 @@
   <section class="sheet cover-sheet" aria-label="表紙">
     <div class="paper-frame"></div>
     <div class="cover-label">Travel Book</div>
+    <div class="cover-confetti" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
 
     <div class="cover-layout">
       <div class="cover-copy">
         <p class="eyebrow">Birthday Trip 2026</p>
-        <h1>京都とUSJ<br>旅のしおり</h1>
-        <p class="cover-lead">2泊3日、写真を撮って、ゆっくり歩いて、たくさん笑う旅。</p>
+        <h1>旅のしおり</h1>
+        <p class="cover-route-label">Kyoto × Universal Studios Japan</p>
         <div class="cover-meta">
           <span>2026.09.05 Sat - 09.07 Mon</span>
           <span>Fukuoka / Kyoto / Universal City</span>
@@ -42,20 +45,29 @@
       </div>
     </div>
 
-    <div class="cover-route">
-      <span>福岡</span>
-      <i></i>
-      <span>関空</span>
-      <i></i>
-      <span>京都</span>
-      <i></i>
-      <span>USJ</span>
-      <i></i>
-      <span>福岡</span>
+    <div class="cover-birthday">
+      <span class="cover-birthday-label">Happy Birthday, Sayaka</span>
+      <p class="cover-birthday-text">とっておきの2泊3日、はじまります。</p>
     </div>
 
     <footer class="route-footer">
       <span class="page-no">01</span>
+      <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
+    </footer>
+  </section>
+
+  <section class="sheet birthday-sheet" aria-label="バースデーカード">
+    <div class="paper-frame"></div>
+    <div class="birthday-confetti" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <figure class="birthday-card">
+      <img src="assets/images/cover/birthday-card.png" alt="Happy Birthday to you のイラストカード。パーティー帽をかぶった3匹の猫を抱いた、後ろ姿の女の子。">
+    </figure>
+
+    <footer class="route-footer">
+      <span class="page-no">02</span>
       <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
     </footer>
   </section>
@@ -65,7 +77,7 @@
     <header class="page-header">
       <p class="eyebrow">Index</p>
       <h2>旅の基本</h2>
-      <p>修学旅行のしおりみたいに、必要なことをページごとにまとめました。</p>
+      <p>迷わないように、必要なことだけページごとにまとめました。</p>
     </header>
 
     <div class="basic-grid">
@@ -91,18 +103,88 @@
     </div>
 
     <div class="index-list">
-      <a href="#route"><span>03</span>経路・チケット</a>
-      <a href="#day1"><span>04</span>DAY 1 京都へ</a>
-      <a href="#kimono"><span>05</span>着物と京都散策</a>
-      <a href="#day2"><span>06</span>DAY 2 夕方からUSJ</a>
-      <a href="#day3"><span>07</span>DAY 3 朝からUSJ</a>
-      <a href="#stay"><span>08</span>宿泊メモ</a>
-      <a href="#packing"><span>09</span>持ち物リスト</a>
-      <a href="#memo"><span>10</span>写真・お土産メモ</a>
+      <a href="#overview"><span>04</span>全体日程表</a>
+      <a href="#route"><span>05</span>経路・チケット</a>
+      <a href="#day1"><span>06</span>DAY 1 京都へ</a>
+      <a href="#kimono"><span>07</span>着物と京都散策</a>
+      <a href="#gourmet"><span>08</span>食べたいものメモ</a>
+      <a href="#day2"><span>09</span>DAY 2 夕方からUSJ</a>
+      <a href="#day3"><span>10</span>DAY 3 朝からUSJ</a>
+      <a href="#stay"><span>11</span>宿泊メモ</a>
+      <a href="#packing"><span>12</span>天気・持ち物リスト</a>
+      <a href="#emergency"><span>13</span>もしものときに</a>
+      <a href="#budget"><span>14</span>予算・お財布メモ</a>
+      <a href="#memo"><span>15</span>写真・お土産メモ</a>
     </div>
 
     <footer class="route-footer">
-      <span class="page-no">02</span>
+      <span class="page-no">03</span>
+      <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
+    </footer>
+  </section>
+
+  <section class="sheet" id="overview" aria-label="全体日程表">
+    <div class="paper-frame"></div>
+    <header class="page-header">
+      <p class="eyebrow">Overview</p>
+      <h2>全体日程表</h2>
+      <p>3日間の流れを1枚で確認できるページ。当日、迷ったらここを見る。</p>
+    </header>
+
+    <div class="overview-grid">
+      <article class="overview-day">
+        <h3><span>Day 1 / 9.5 Sat</span>京都へ向かう日</h3>
+        <ul class="overview-list">
+          <li><time>07:25</time>福岡空港 出発</li>
+          <li><time>08:40</time>関西空港 到着</li>
+          <li><time>09:41</time>はるかで京都へ</li>
+          <li><time>11:04</time>京都駅 到着</li>
+          <li><time>12:30</time>ホテルに荷物預け</li>
+          <li><time>13:30</time>着物レンタル</li>
+          <li><time>午後</time>京都を散策</li>
+          <li><time>夜</time>夕食・京都の夜</li>
+        </ul>
+      </article>
+
+      <article class="overview-day">
+        <h3><span>Day 2 / 9.6 Sun</span>夕方からUSJへ</h3>
+        <ul class="overview-list">
+          <li><time>08:30</time>朝の京都を散策</li>
+          <li><time>10:45</time>ホテルをチェックアウト</li>
+          <li><time>11:30</time>京都で早めランチ</li>
+          <li><time>12:30</time>ユニバーサルシティへ</li>
+          <li><time>14:00</time>ホテル近鉄へ荷物預け</li>
+          <li><time>15:00</time>USJへ入場</li>
+          <li><time>夜</time>USJで夕食</li>
+          <li><time>閉園後</time>ホテルへ戻る</li>
+        </ul>
+      </article>
+
+      <article class="overview-day">
+        <h3><span>Day 3 / 9.7 Mon</span>朝からUSJ、夜は福岡へ</h3>
+        <ul class="overview-list">
+          <li><time>朝</time>チェックアウト・荷物預け</li>
+          <li><time>開園</time>USJへ入場</li>
+          <li><time>昼</time>ランチ・お土産</li>
+          <li><time>15:10</time>荷物回収・バス乗り場へ</li>
+          <li><time>15:40</time>関空リムジンバス出発</li>
+          <li><time>17:01</time>関空 到着</li>
+          <li><time>18:50</time>Peachで福岡へ</li>
+          <li><time>20:10</time>福岡空港 到着</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="echo-strip large">
+      <figure class="memory-shot">
+        <img src="assets/images/memories/sanctuary-approach-bg.png" alt="大きな山門を見上げながら参道を歩く後ろ姿のイラスト">
+        <figcaption>Sanctuary Approach</figcaption>
+      </figure>
+      <p class="echo-text"><span class="eyebrow">Before This Trip</span>前にもこうして、二人でどこかへ出かけた。今回もきっと、同じくらい楽しい。</p>
+    </div>
+
+    <footer class="route-footer">
+      <span class="page-no">04</span>
       <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
     </footer>
   </section>
@@ -161,7 +243,7 @@
     </div>
 
     <footer class="route-footer">
-      <span class="page-no">03</span>
+      <span class="page-no">05</span>
       <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
     </footer>
   </section>
@@ -197,8 +279,12 @@
       <p>決めすぎない。歩きすぎない。かわいい写真は逃さない。</p>
     </div>
 
+    <div class="day-diary">
+      <h3>今日のひとことメモ</h3>
+    </div>
+
     <footer class="route-footer">
-      <span class="page-no">04</span>
+      <span class="page-no">06</span>
       <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
     </footer>
   </section>
@@ -257,8 +343,67 @@
       </div>
     </div>
 
+    <div class="echo-strip">
+      <figure class="memory-shot">
+        <img src="assets/images/memories/night-visit-bg.png" alt="夜の参道で提灯を見上げる後ろ姿のイラスト">
+        <figcaption>Night Visit</figcaption>
+      </figure>
+      <p class="echo-text"><span class="eyebrow">Before This Trip</span>夜の参道を、提灯を見上げながら歩いた日。あの夜みたいに、京都の夜を歩く。</p>
+    </div>
+
     <footer class="route-footer">
-      <span class="page-no">05</span>
+      <span class="page-no">07</span>
+      <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
+    </footer>
+  </section>
+
+  <section class="sheet" id="gourmet" aria-label="食べたいものメモ">
+    <div class="paper-frame"></div>
+    <header class="page-header">
+      <p class="eyebrow">Food Notes</p>
+      <h2>食べたいものメモ</h2>
+      <p>気になっているジャンルを先に書き出しておくページ。お店は当日決めても大丈夫。</p>
+    </header>
+
+    <div class="choice-grid">
+      <article class="choice-card">
+        <h3>京都で気になるもの</h3>
+        <ul class="check-list">
+          <li>抹茶スイーツ</li>
+          <li>湯豆腐</li>
+          <li>鴨川沿いのカフェごはん</li>
+          <li>祇園の甘味処</li>
+          <li>おばんざい・京漬物</li>
+        </ul>
+      </article>
+
+      <article class="choice-card">
+        <h3>USJで気になるもの</h3>
+        <ul class="check-list">
+          <li>バタービール</li>
+          <li>ミニオンのポップコーンバケツ</li>
+          <li>シティウォークでがっつりごはん</li>
+          <li>スイーツ・ドーナツ</li>
+          <li>限定パッケージのお菓子</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="lined-memo packing-note">
+      <h3>当日のお店メモ</h3>
+      <p></p>
+    </div>
+
+    <div class="echo-strip">
+      <figure class="memory-shot">
+        <img src="assets/images/memories/takeaway-joy-bg.png" alt="バーガーキングの店先でテイクアウトを掲げるイラスト">
+        <figcaption>Takeaway Joy</figcaption>
+      </figure>
+      <p class="echo-text"><span class="eyebrow">Before This Trip</span>こういう気取らない一食も、旅の醍醐味。</p>
+    </div>
+
+    <footer class="route-footer">
+      <span class="page-no">08</span>
       <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
     </footer>
   </section>
@@ -273,7 +418,7 @@
       <div class="date-badge">9/6<br><span>Sun</span></div>
     </header>
 
-    <div class="day-theme rose-theme">
+    <div class="day-theme peach-theme">
       <strong>チケット想定</strong>
       <span>1.5デイ・スタジオ・パス。1日目は15:00から入場。</span>
     </div>
@@ -300,8 +445,12 @@
       </article>
     </div>
 
+    <div class="day-diary">
+      <h3>今日のひとことメモ</h3>
+    </div>
+
     <footer class="route-footer">
-      <span class="page-no">06</span>
+      <span class="page-no">09</span>
       <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
     </footer>
   </section>
@@ -339,8 +488,12 @@
       </aside>
     </div>
 
+    <div class="day-diary">
+      <h3>今日のひとことメモ</h3>
+    </div>
+
     <footer class="route-footer">
-      <span class="page-no">07</span>
+      <span class="page-no">10</span>
       <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
     </footer>
   </section>
@@ -390,7 +543,7 @@
     </div>
 
     <footer class="route-footer">
-      <span class="page-no">08</span>
+      <span class="page-no">11</span>
       <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
     </footer>
   </section>
@@ -398,10 +551,28 @@
   <section class="sheet" id="packing" aria-label="持ち物リスト">
     <div class="paper-frame"></div>
     <header class="page-header">
-      <p class="eyebrow">Packing List</p>
-      <h2>持ち物リスト</h2>
-      <p>前日チェック用。チェックを入れながら準備。</p>
+      <p class="eyebrow">Weather & Packing</p>
+      <h2>天気・持ち物リスト</h2>
+      <p>前日に天気を確認して記入。そのあとチェックを入れながら準備。</p>
     </header>
+
+    <div class="weather-grid">
+      <article class="weather-card">
+        <span>9/5 Sat</span>
+        <div class="weather-fill"><label>天気</label><i></i></div>
+        <div class="weather-fill"><label>気温</label><i></i></div>
+      </article>
+      <article class="weather-card">
+        <span>9/6 Sun</span>
+        <div class="weather-fill"><label>天気</label><i></i></div>
+        <div class="weather-fill"><label>気温</label><i></i></div>
+      </article>
+      <article class="weather-card">
+        <span>9/7 Mon</span>
+        <div class="weather-fill"><label>天気</label><i></i></div>
+        <div class="weather-fill"><label>気温</label><i></i></div>
+      </article>
+    </div>
 
     <div class="packing-grid">
       <article class="packing-card">
@@ -453,14 +624,101 @@
       </article>
     </div>
 
-    <div class="stamp-area">
-      <span>前日チェック</span>
-      <span>出発前チェック</span>
-      <span>ホテル出発前チェック</span>
+    <div class="lined-memo packing-note">
+      <h3>追加で持っていくものメモ</h3>
+      <p></p>
     </div>
 
     <footer class="route-footer">
-      <span class="page-no">09</span>
+      <span class="page-no">12</span>
+      <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
+    </footer>
+  </section>
+
+  <section class="sheet" id="emergency" aria-label="もしものときに">
+    <div class="paper-frame"></div>
+    <header class="page-header">
+      <p class="eyebrow">Just In Case</p>
+      <h2>もしものときに</h2>
+      <p>出発前に空欄を埋めておくと安心なページ。</p>
+    </header>
+
+    <div class="choice-grid">
+      <article class="choice-card">
+        <h3>共通の緊急連絡先</h3>
+        <ul class="fact-list">
+          <li><span>警察</span><strong>110</strong></li>
+          <li><span>救急・消防</span><strong>119</strong></li>
+          <li><span>海上保安庁</span><strong>118</strong></li>
+        </ul>
+      </article>
+
+      <article class="choice-card">
+        <h3>今回の宿泊先</h3>
+        <ul class="fill-list">
+          <li><span>sequence KYOTO GOJO</span><i></i></li>
+          <li><span>ホテル近鉄ユニバーサル・シティ</span><i></i></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="choice-grid">
+      <article class="choice-card">
+        <h3>カード・貴重品</h3>
+        <ul class="fill-list">
+          <li><span>クレジットカード紛失窓口</span><i></i></li>
+          <li><span>スマホ紛失時の連絡先</span><i></i></li>
+        </ul>
+      </article>
+
+      <article class="choice-card">
+        <h3>保険・その他</h3>
+        <ul class="fill-list">
+          <li><span>旅行保険 連絡先</span><i></i></li>
+          <li><span>証券番号</span><i></i></li>
+        </ul>
+      </article>
+    </div>
+
+    <footer class="route-footer">
+      <span class="page-no">13</span>
+      <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
+    </footer>
+  </section>
+
+  <section class="sheet" id="budget" aria-label="予算・お財布メモ">
+    <div class="paper-frame"></div>
+    <header class="page-header">
+      <p class="eyebrow">Budget Notes</p>
+      <h2>予算・お財布メモ</h2>
+      <p>使った金額をその場で書き込むページ。あとで見返すと面白い。</p>
+    </header>
+
+    <div class="budget-summary">
+      <div><span>持っていく現金</span><i></i></div>
+      <div><span>カード利用の目安</span><i></i></div>
+    </div>
+
+    <div class="budget-table">
+      <div class="budget-row budget-head">
+        <span>日付</span><span>使った場所</span><span>金額</span><span>メモ</span>
+      </div>
+      <div class="budget-row"><span></span><span></span><span></span><span></span></div>
+      <div class="budget-row"><span></span><span></span><span></span><span></span></div>
+      <div class="budget-row"><span></span><span></span><span></span><span></span></div>
+      <div class="budget-row"><span></span><span></span><span></span><span></span></div>
+      <div class="budget-row"><span></span><span></span><span></span><span></span></div>
+      <div class="budget-row"><span></span><span></span><span></span><span></span></div>
+      <div class="budget-row"><span></span><span></span><span></span><span></span></div>
+      <div class="budget-row"><span></span><span></span><span></span><span></span></div>
+      <div class="budget-row"><span></span><span></span><span></span><span></span></div>
+      <div class="budget-row"><span></span><span></span><span></span><span></span></div>
+      <div class="budget-row"><span></span><span></span><span></span><span></span></div>
+      <div class="budget-row"><span></span><span></span><span></span><span></span></div>
+    </div>
+
+    <footer class="route-footer">
+      <span class="page-no">14</span>
       <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
     </footer>
   </section>
@@ -492,13 +750,22 @@
       </article>
     </div>
 
+    <div class="echo-strip">
+      <figure class="memory-shot">
+        <img src="assets/images/memories/post-memory-bg.png" alt="黄色いポストの前に立つ後ろ姿のイラスト">
+        <figcaption>Post Memory</figcaption>
+      </figure>
+      <p class="echo-text"><span class="eyebrow">Before This Trip</span>思い出はいつも、こうしてひとつずつ増えていく。</p>
+    </div>
+
     <div class="final-message">
       <p class="eyebrow">For Sayaka</p>
       <h2>たのしい誕生日旅行になりますように。</h2>
+      <div class="memo-lines short"></div>
     </div>
 
     <footer class="route-footer">
-      <span class="page-no">10</span>
+      <span class="page-no">15</span>
       <span class="route-text">Fukuoka - Kansai Airport - Kyoto - USJ - Fukuoka</span>
     </footer>
   </section>
