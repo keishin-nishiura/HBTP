@@ -899,7 +899,321 @@ button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparen
   font-weight: 700;
   border-bottom: 1px solid rgba(232, 200, 147, 0.45);
 }
+.footer-actions {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+.footer-actions .footer-link { margin-top: 0; }
 .footer-sub { color: rgba(248, 244, 236, 0.4); font-size: 0.7rem; }
+
+/* ================= Dinner Candidates ================= */
+.dinner-page {
+  background:
+    linear-gradient(180deg, rgba(248, 244, 236, 0.96), rgba(242, 236, 224, 0.94)),
+    var(--cream);
+}
+.dinner-hero {
+  position: relative;
+  z-index: 1;
+  min-height: 390px;
+  display: flex;
+  align-items: flex-end;
+  padding: 28px 0 42px;
+  color: var(--cream);
+  background-image:
+    linear-gradient(180deg, rgba(10, 20, 32, 0.24), rgba(10, 20, 32, 0.88)),
+    var(--dinner-hero-image);
+  background-size: cover;
+  background-position: center;
+}
+.dinner-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 74px;
+  background: linear-gradient(180deg, rgba(248, 244, 236, 0), var(--cream));
+  pointer-events: none;
+}
+.dinner-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+.dinner-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  margin-bottom: 76px;
+  padding: 7px 12px;
+  border: 1px solid rgba(248, 244, 236, 0.34);
+  border-radius: 999px;
+  background: rgba(10, 20, 32, 0.36);
+  color: rgba(248, 244, 236, 0.9);
+  font-size: 0.78rem;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+}
+.dinner-hero .section-eyebrow { color: var(--gold-light); }
+.dinner-hero h1 {
+  margin-top: 10px;
+  font-family: var(--font-serif);
+  font-size: 2.35rem;
+  line-height: 1.25;
+  color: #fffefb;
+}
+.dinner-hero-copy {
+  max-width: 620px;
+  margin-top: 14px;
+  color: rgba(248, 244, 236, 0.78);
+  font-size: 0.94rem;
+  line-height: 1.8;
+}
+.dinner-hero-picks {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dinner-hero-picks span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid rgba(232, 200, 147, 0.32);
+  border-radius: 999px;
+  background: rgba(248, 244, 236, 0.1);
+  color: rgba(248, 244, 236, 0.88);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.dinner-shell { max-width: 980px; }
+.dinner-overview { padding-top: 52px; background: var(--cream); }
+.dinner-list-section { background: rgba(247, 241, 230, 0.72); }
+.dinner-check-section { background: linear-gradient(180deg, rgba(247, 241, 230, 0.72), var(--cream)); }
+.dinner-summary-grid {
+  margin-top: 28px;
+  display: grid;
+  gap: 14px;
+}
+.dinner-summary-item {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+}
+.dinner-summary-label {
+  display: inline-block;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.dinner-summary-item h3 {
+  margin-top: 8px;
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+.dinner-summary-item p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.75;
+}
+.dinner-card-list {
+  margin-top: 28px;
+  display: grid;
+  gap: 20px;
+}
+.dinner-card {
+  overflow: hidden;
+  display: grid;
+  background: #fffefb;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+.dinner-card-caution {
+  border-color: rgba(205, 160, 90, 0.5);
+  box-shadow: 0 20px 50px rgba(205, 160, 90, 0.15);
+}
+.dinner-photo {
+  position: relative;
+  min-height: 210px;
+  background: #e9e1d3;
+}
+.dinner-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 210px;
+  display: block;
+  object-fit: cover;
+}
+.dinner-area-tag {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(15, 30, 46, 0.72);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.dinner-card-body { padding: 20px; }
+.dinner-card-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 14px;
+}
+.dinner-number {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--navy);
+  color: var(--gold-light);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.dinner-card h3 {
+  color: var(--navy);
+  font-size: 1.16rem;
+  line-height: 1.45;
+}
+.dinner-card-head p {
+  margin-top: 3px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.dinner-lead {
+  margin-top: 16px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+.dinner-facts {
+  margin: 18px 0 0;
+  display: grid;
+  gap: 10px;
+}
+.dinner-facts div {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.dinner-facts div:last-child { border-bottom: none; padding-bottom: 0; }
+.dinner-facts dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.dinner-facts dd {
+  margin: 0;
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+.dinner-tags {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dinner-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(47, 111, 143, 0.1);
+  color: var(--osaka);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.dinner-card-caution .dinner-tags span {
+  background: rgba(205, 160, 90, 0.16);
+  color: #8b642a;
+}
+.dinner-actions {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.dinner-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.dinner-actions a:nth-child(2) {
+  background: rgba(15, 30, 46, 0.08);
+  color: var(--navy);
+}
+.photo-credit {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+.dinner-check-list {
+  margin-top: 28px;
+  display: grid;
+  gap: 12px;
+}
+.dinner-check-list p {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+  margin: 0;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  color: var(--ink);
+  font-size: 0.86rem;
+  line-height: 1.75;
+}
+.dinner-check-list span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--gold);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.dinner-source-note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  text-align: right;
+}
 
 /* ================= Responsive (Tablet / Desktop) ================= */
 @media (min-width: 640px) {
@@ -908,8 +1222,16 @@ button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparen
   .stat-cards { gap: 18px; }
   .photo-grid { grid-template-columns: repeat(2, 1fr); }
   .hotel-cards { grid-template-columns: repeat(2, 1fr); }
+  .dinner-hero h1 { font-size: 3rem; }
+  .dinner-summary-grid { grid-template-columns: repeat(3, 1fr); }
+  .dinner-card { grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.1fr); }
+  .dinner-photo,
+  .dinner-photo img { min-height: 100%; }
 }
 @media (min-width: 960px) {
   .container { max-width: 900px; }
   .photo-grid { grid-template-columns: repeat(3, 1fr); }
+  .dinner-shell { max-width: 1040px; }
+  .dinner-card { grid-template-columns: 380px minmax(0, 1fr); }
+  .dinner-card-body { padding: 26px; }
 }

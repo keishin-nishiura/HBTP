@@ -2475,6 +2475,432 @@ body {
 .cover-confetti span:nth-child(11) { bottom: 30mm; left: 99mm; width: 2.5mm; height: 2.5mm; }
 .cover-confetti span:nth-child(12) { bottom: 25mm; right: 18mm; width: 2.2mm; height: 2.2mm; }
 
+/* Full cover redesign */
+.cover-sheet {
+  padding: 14mm 14mm 20mm;
+  background:
+    radial-gradient(circle at 74% 25%, rgba(116, 153, 188, 0.34), transparent 29%),
+    radial-gradient(circle at 22% 78%, rgba(242, 191, 134, 0.32), transparent 31%),
+    linear-gradient(135deg, rgba(255, 248, 234, 0.98) 0%, rgba(255, 254, 250, 0.98) 42%, rgba(232, 244, 248, 0.98) 100%);
+}
+
+.cover-sheet::before {
+  top: 9mm;
+  right: 7mm;
+  width: 92mm;
+  height: 92mm;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(201, 155, 80, 0.42) 0 1.2mm, transparent 1.35mm),
+    radial-gradient(circle at 78% 19%, rgba(75, 99, 128, 0.34) 0 1.1mm, transparent 1.25mm),
+    radial-gradient(circle at 72% 74%, rgba(205, 130, 124, 0.26) 0 1.1mm, transparent 1.25mm),
+    linear-gradient(38deg, transparent 40%, rgba(201, 155, 80, 0.3) 41% 44%, transparent 45%),
+    linear-gradient(-32deg, transparent 51%, rgba(95, 145, 166, 0.25) 52% 55%, transparent 56%);
+  opacity: 1;
+}
+
+.cover-sheet::after {
+  left: 8mm;
+  bottom: 17mm;
+  width: 96mm;
+  height: 63mm;
+  background:
+    radial-gradient(circle at 13% 73%, rgba(95, 145, 166, 0.34) 0 1.25mm, transparent 1.4mm),
+    radial-gradient(circle at 86% 22%, rgba(201, 155, 80, 0.4) 0 1.1mm, transparent 1.25mm),
+    linear-gradient(-34deg, transparent 39%, rgba(201, 155, 80, 0.24) 40% 44%, transparent 45%),
+    linear-gradient(24deg, transparent 56%, rgba(205, 130, 124, 0.19) 57% 60%, transparent 61%);
+}
+
+.cover-sheet .paper-frame {
+  inset: 6.5mm;
+  border-color: rgba(201, 155, 80, 0.46);
+}
+
+.cover-burst {
+  position: absolute;
+  inset: 7mm;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cover-burst span {
+  position: absolute;
+  width: 3mm;
+  height: 3mm;
+  border-radius: 46% 54% 38% 62%;
+  background: rgba(201, 155, 80, 0.74);
+  box-shadow: 0 0 0 0.4mm rgba(255, 255, 255, 0.45);
+  transform: rotate(45deg);
+}
+
+.cover-burst span:nth-child(1) { top: 18mm; left: 20mm; width: 3.6mm; height: 3.6mm; background: rgba(95, 145, 166, 0.68); }
+.cover-burst span:nth-child(2) { top: 26mm; left: 66mm; width: 2.4mm; height: 2.4mm; background: rgba(205, 130, 124, 0.58); }
+.cover-burst span:nth-child(3) { top: 13mm; right: 55mm; width: 2.8mm; height: 2.8mm; }
+.cover-burst span:nth-child(4) { top: 52mm; right: 18mm; width: 3.2mm; height: 3.2mm; background: rgba(95, 145, 166, 0.62); }
+.cover-burst span:nth-child(5) { top: 93mm; left: 15mm; width: 2.5mm; height: 2.5mm; }
+.cover-burst span:nth-child(6) { top: 129mm; right: 80mm; width: 3.4mm; height: 3.4mm; background: rgba(205, 130, 124, 0.55); }
+.cover-burst span:nth-child(7) { top: 165mm; right: 24mm; width: 2.5mm; height: 2.5mm; background: rgba(95, 145, 166, 0.62); }
+.cover-burst span:nth-child(8) { bottom: 60mm; left: 35mm; width: 2.4mm; height: 2.4mm; }
+.cover-burst span:nth-child(9) { bottom: 39mm; right: 45mm; width: 2.9mm; height: 2.9mm; background: rgba(205, 130, 124, 0.52); }
+.cover-burst span:nth-child(10) { bottom: 23mm; left: 118mm; width: 2.6mm; height: 2.6mm; background: rgba(95, 145, 166, 0.6); }
+
+.cover-hero {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 72mm;
+  gap: 7mm;
+  min-height: 145mm;
+}
+
+.cover-title-panel {
+  position: relative;
+  align-self: start;
+  min-height: 128mm;
+  padding: 18mm 7mm 8mm;
+}
+
+.cover-title-panel::before {
+  content: "HAPPY BIRTHDAY";
+  position: absolute;
+  top: 9mm;
+  left: 7mm;
+  color: rgba(201, 155, 80, 0.14);
+  font-family: var(--font-display);
+  font-size: 24pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.cover-title-panel::after {
+  content: "2 nights 3 days";
+  position: absolute;
+  right: 8mm;
+  bottom: 10mm;
+  display: grid;
+  place-items: center;
+  width: 25mm;
+  height: 25mm;
+  border: 1px solid rgba(201, 155, 80, 0.32);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 70% 22%, rgba(95, 145, 166, 0.14), transparent 38%),
+    rgba(255, 255, 255, 0.72);
+  color: var(--rose);
+  font-family: var(--font-display);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 5px 16px rgba(65, 55, 42, 0.08);
+}
+
+.cover-kicker {
+  position: relative;
+  z-index: 1;
+  color: var(--rose);
+  font-family: var(--font-display);
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cover-title-panel h1 {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.5mm;
+  margin-top: 4mm;
+  color: var(--plum);
+  font-family: var(--font-display);
+  font-size: 37pt;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+}
+
+.cover-title-panel h1 span:nth-child(2) {
+  color: var(--gold);
+}
+
+.cover-title-panel h1 strong {
+  display: block;
+  width: fit-content;
+  margin-top: 6mm;
+  padding: 0 1.5mm 1.4mm 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--plum);
+  font-family: var(--font-serif);
+  font-size: 31pt;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0;
+  box-shadow: inset 0 -4.2mm 0 rgba(242, 191, 134, 0.34);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.88);
+}
+
+.cover-lead-v2 {
+  position: relative;
+  z-index: 1;
+  max-width: 69mm;
+  margin-top: 6.5mm;
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 12.8pt;
+  font-weight: 700;
+  line-height: 1.78;
+}
+
+.cover-main-art {
+  position: relative;
+  z-index: 2;
+  width: 72mm;
+  height: 128mm;
+  margin-top: 9mm;
+  overflow: hidden;
+  border: 2mm solid rgba(255, 255, 255, 0.98);
+  border-radius: 3.2mm;
+  background: #fffefa;
+  box-shadow:
+    -4mm 4mm 0 rgba(95, 145, 166, 0.14),
+    3mm -3mm 0 rgba(201, 155, 80, 0.16),
+    0 12px 28px rgba(65, 55, 42, 0.14);
+  transform: rotate(2.4deg);
+}
+
+.cover-main-art::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -3mm;
+  z-index: 3;
+  width: 31mm;
+  height: 7mm;
+  background: linear-gradient(90deg, rgba(255, 241, 210, 0.82), rgba(231, 190, 120, 0.52));
+  box-shadow: 0 1mm 3mm rgba(83, 61, 35, 0.1);
+  transform: translateX(-50%) rotate(-3deg);
+}
+
+.cover-main-art::after {
+  content: "";
+  position: absolute;
+  inset: 3mm;
+  z-index: 2;
+  border: 1px solid rgba(201, 155, 80, 0.2);
+  pointer-events: none;
+}
+
+.cover-main-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cover-date-card {
+  position: absolute;
+  right: 58mm;
+  bottom: 12mm;
+  z-index: 3;
+  display: grid;
+  gap: 1.4mm;
+  width: 55mm;
+  padding: 4.2mm 5mm;
+  border: 1px solid rgba(201, 155, 80, 0.24);
+  border-radius: 2.8mm;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 8px 22px rgba(65, 55, 42, 0.1);
+  transform: rotate(-2.5deg);
+}
+
+.cover-date-card span {
+  color: var(--rose);
+  font-family: var(--font-display);
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cover-date-card strong {
+  color: var(--plum);
+  font-family: var(--font-display);
+  font-size: 18pt;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cover-date-card small {
+  color: var(--muted);
+  font-size: 7.5pt;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.cover-ticket-strip {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm;
+  margin-top: 2mm;
+}
+
+.cover-ticket {
+  position: relative;
+  min-height: 22mm;
+  padding: 4mm 5mm;
+  border: 1px solid rgba(95, 145, 166, 0.19);
+  border-radius: 3mm;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.88), rgba(255, 246, 232, 0.82));
+  box-shadow: 0 5px 15px rgba(65, 55, 42, 0.065);
+}
+
+.cover-ticket::before,
+.cover-ticket::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 5mm;
+  height: 5mm;
+  border-radius: 50%;
+  background: #fffaf1;
+  transform: translateY(-50%);
+}
+
+.cover-ticket::before {
+  left: -2.6mm;
+  border-right: 1px solid rgba(95, 145, 166, 0.12);
+}
+
+.cover-ticket::after {
+  right: -2.6mm;
+  border-left: 1px solid rgba(95, 145, 166, 0.12);
+}
+
+.cover-ticket > span {
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 7.4pt;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.cover-ticket div {
+  display: flex;
+  align-items: center;
+  gap: 2.5mm;
+  margin-top: 2.7mm;
+}
+
+.cover-ticket b {
+  color: var(--plum);
+  font-size: 8.3pt;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.cover-ticket i {
+  flex: 1;
+  min-width: 5mm;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201, 155, 80, 0.2), rgba(201, 155, 80, 0.62));
+}
+
+.cover-postcards {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr 0.92fr;
+  gap: 4.2mm;
+  margin-top: 5mm;
+  padding: 0 4mm;
+}
+
+.cover-postcards figure {
+  position: relative;
+  height: 40mm;
+  overflow: hidden;
+  border: 1.7mm solid rgba(255, 255, 255, 0.98);
+  border-radius: 2.3mm;
+  background: #fff;
+  box-shadow: 0 7px 18px rgba(65, 55, 42, 0.11);
+}
+
+.cover-postcards figure:nth-child(1) {
+  transform: rotate(-1.5deg);
+}
+
+.cover-postcards figure:nth-child(2) {
+  transform: translateY(-1.2mm) rotate(1.4deg);
+}
+
+.cover-postcards figure:nth-child(3) {
+  transform: rotate(-0.8deg);
+}
+
+.cover-postcards img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.88) sepia(0.08) contrast(0.96) brightness(1.04);
+}
+
+.cover-postcards figcaption {
+  position: absolute;
+  left: 2.5mm;
+  bottom: 2.4mm;
+  padding: 1.1mm 2.4mm;
+  border-radius: 999px;
+  background: rgba(54, 70, 91, 0.76);
+  color: #fffaf1;
+  font-family: var(--font-display);
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.cover-message-card {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  gap: 1.8mm;
+  margin: 5mm 6mm 0;
+  padding: 4.6mm 7mm;
+  border: 1px solid rgba(201, 155, 80, 0.24);
+  border-radius: 3.4mm;
+  background:
+    radial-gradient(circle at 11% 50%, rgba(201, 155, 80, 0.15), transparent 26%),
+    radial-gradient(circle at 89% 42%, rgba(95, 145, 166, 0.14), transparent 28%),
+    rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 20px rgba(65, 55, 42, 0.08);
+  text-align: center;
+}
+
+.cover-message-card span {
+  color: var(--rose);
+  font-family: var(--font-display);
+  font-size: 10.2pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cover-message-card p {
+  color: var(--plum);
+  font-family: var(--font-serif);
+  font-size: 13.2pt;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
 @page {
   size: A4;
   margin: 0;
