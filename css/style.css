@@ -1117,13 +1117,12 @@ button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparen
   border-bottom: 1px solid var(--line);
 }
 .dinner-facts div:last-child { border-bottom: none; padding-bottom: 0; }
-.dinner-facts dt {
+.dinner-fact-label {
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 700;
 }
-.dinner-facts dd {
-  margin: 0;
+.dinner-fact-value {
   color: var(--navy);
   font-size: 0.82rem;
   font-weight: 700;
